@@ -1,0 +1,19 @@
+Q. Design and Implement an AbstractFactory class to create families of related or dependent objects with respect to decathlon store without specifying their concrete classes using Abstract Factory?
+ANS:
+The Abstract Factory Design Pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes. In the context of a Decathlon store, this could involve creating related products, such as sports equipment (e.g., shoes, jerseys, etc.) for different sports categories (e.g., football, basketball).
+
+Here's a Python implementation of the Abstract Factory for Decathlon:
+1. Abstract Factory Interface
+Provides methods to create related objects (e.g., shoes, jerseys).
+2. Concrete Factories
+Concrete factories for specific sports like FootballFactory and BasketballFactory, each producing related products (e.g., football shoes and football jerseys, basketball shoes and basketball jerseys).
+3. Product Interfaces
+Abstract products (e.g., Shoes, Jersey) define a set of methods that all product types should implement.
+4. Concrete Products
+Concrete products like FootballShoes, BasketballShoes, etc., implement the product interfaces.
+
+
+
+
+Real-world Use Case:
+The Abstract Factory pattern is useful in situations where you need to create a set of related objects that must be used together, such as in a Decathlon store where each sport (e.g., football, basketball) has its own set of equipment and clothing that must be consistent within that category.

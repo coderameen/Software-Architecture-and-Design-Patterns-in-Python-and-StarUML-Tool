@@ -1,0 +1,18 @@
+Q.Design and Implement to Extend a Coffee object with dynamic features (e.g., milk, sugar, whipped cream) using Decorators?
+ANS:
+The Decorator Design Pattern is used to extend or alter the functionality of objects at runtime without modifying their original structure. In the case of a coffee object, you can use decorators to dynamically add features like milk, sugar, or whipped cream.
+
+Components:
+Coffee Interface: Represents the base object (plain coffee).
+Concrete Coffee: A simple coffee class implementing the interface.
+Decorator Base Class: This class implements the same interface and holds a reference to a Coffee object to which additional functionality can be added.
+Concrete Decorators: These classes extend the functionality of Coffee by adding features like milk, sugar, and whipped cream.
+
+Explanation:
+Coffee: Basic coffee with a default cost.
+CoffeeDecorator: Base decorator that wraps a Coffee object and delegates the cost() method.
+Concrete Decorators: MilkDecorator, SugarDecorator, and WhippedCreamDecorator add specific features and increase the coffee's cost.
+Client Code: Combines the features dynamically by wrapping decorators around the base Coffee object.
+
+Real-world Use Case:
+This pattern is often used in systems where you need to add functionality to objects dynamically. For example, in a coffee shop system, customers might want to customize their coffee with different add-ons (milk, sugar, etc.), and the decorator pattern provides a flexible way to handle these modifications without modifying the original coffee class.

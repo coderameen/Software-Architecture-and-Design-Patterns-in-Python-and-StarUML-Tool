@@ -1,0 +1,31 @@
+Q. Design and implement ShapeFactory class that generates different types of Shape objects (Circle, Square, Rectangle) based on input parameters using Factory Design Pattern. 
+Ans:
+FACTORY DESIGN PATTERN:
+The Factory Design Pattern is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created. Instead of directly instantiating classes, it delegates the responsibility of object creation to a factory class.
+
+Why it's used:
+To centralize object creation logic.
+To create objects without exposing the creation logic to the client.
+To enable flexibility when introducing new object types (easy to extend).
+To reduce coupling between the client and the concrete classes.
+
+Where it's used (Real-time examples):
+UI frameworks: A framework might use factories to create different UI components (buttons, menus, etc.) depending on the platform (e.g., Windows, Mac).
+Database connections: Factory pattern is used to create different database connections (e.g., MySQL, PostgreSQL) based on configuration.
+Document readers: Software might use factories to open different types of documents (PDF, Word, etc.) based on file format.
+In summary, the Factory Design Pattern is useful when there is a need to manage and control object creation dynamically, based on input conditions or configurations.
+
+
+To be implement:
+Shape (Abstract Class):
+Acts as the common interface for all concrete shapes. It has an abstract method draw(), which is implemented by the concrete shape classes.
+
+Concrete Shape Classes:
+Circle, Square, and Rectangle are concrete implementations of the Shape class, each with its own parameters and implementation of the draw() method.
+
+ShapeFactory Class:
+The ShapeFactory class contains a static method create_shape() which takes the shape type (e.g., 'Circle', 'Square', 'Rectangle') and other relevant parameters (radius, side, width, height) and returns the appropriate shape object.
+
+Example Usage:
+The code demonstrates how the factory can be used to create different shape objects based on the input.
+This design pattern makes it easy to extend the code by adding new shapes without modifying the factory itself.

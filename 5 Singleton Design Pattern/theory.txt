@@ -1,0 +1,13 @@
+Q.Design and Implement a Logger class ensuring a single instance throughout the application?
+ANS:
+
+To ensure that a Logger class has only one instance throughout the application, we can use the Singleton Design Pattern. The Singleton pattern restricts the instantiation of a class to a single object, ensuring that only one instance of the class exists and can be accessed globally.
+
+Steps:
+Singleton Pattern: This ensures that only one instance of the Logger is created.
+Logger Class: Implements the actual logging functionality, but only one instance is allowed.
+
+
+
+Real-world Use Case:
+The Singleton pattern is often used in situations where a single point of access to an object is required. A logger is a perfect example because you typically want a single logger instance writing to a single log file, avoiding confusion with multiple log files and ensuring consistent logging across the entire application.

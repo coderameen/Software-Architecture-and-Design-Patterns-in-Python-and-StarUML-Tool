@@ -1,0 +1,15 @@
+Q. Design and Implement a Mediator pattern to manage communication between a set of objects (e.g., chat room with multiple participants).?
+
+The Mediator Pattern defines an object that encapsulates how a set of objects interact. This pattern promotes loose coupling by preventing objects from referring to each other explicitly and allows their interaction to be managed by a central mediator.
+
+In a chat room scenario, each participant sends and receives messages via the Mediator (which is the chat room itself), rather than communicating directly with each other. The chat room manages all communications, ensuring participants don't need to be aware of the existence of other participants.
+
+Components:
+Mediator Interface: Defines the method for communication between participants.
+Concrete Mediator (ChatRoom): Implements the logic for routing messages between participants.
+Colleagues (Participants): These are the individual chat participants who send messages through the mediator.
+Client Code: Demonstrates the chat interaction using the mediator.
+
+
+Real-world Example:
+Messaging Apps: In apps like Slack, WhatsApp, or Telegram, users send messages through a server (the mediator), which routes the messages to the appropriate recipients. The users don’t communicate directly but rely on the mediator to handle all communication and ensure message delivery.

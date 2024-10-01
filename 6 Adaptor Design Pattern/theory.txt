@@ -1,0 +1,17 @@
+Q. Design and implement an Adapter Pattern for a Music System?
+ANS:
+The Adapter Pattern allows incompatible interfaces to work together by providing a bridge between them. In the context of a music system, you might have an old music player system (e.g., CD player) that only understands a certain interface, but you want to use it with modern devices like a streaming service. The Adapter Pattern will help you make these different systems compatible without changing their existing code.
+
+Scenario:
+We have a ModernMusicPlayer that supports streaming services like Spotify.
+We also have an OldMusicPlayer that only plays CDs.
+We need to adapt the ModernMusicPlayer to work with the OldMusicPlayer interface using an adapter.
+Components:
+OldMusicPlayer Interface: Represents the old music player that only plays CDs.
+ModernMusicPlayer Class: Represents a new music player that plays from streaming services.
+Adapter (StreamingAdapter): Converts the ModernMusicPlayer interface to be compatible with OldMusicPlayer.
+Client Code: Demonstrates the use of the adapter.
+
+
+Real-world Use Case:
+The Adapter pattern is useful when you have an existing system that you don't want to modify, but you need to integrate it with a new system that has a different interface. In this case, an adapter allows a modern streaming music player to be used with an older CD player interface, making the systems compatible without altering their existing code.

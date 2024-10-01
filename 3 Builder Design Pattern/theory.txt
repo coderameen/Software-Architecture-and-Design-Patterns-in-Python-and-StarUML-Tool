@@ -1,0 +1,21 @@
+Q. Design and implement a complex object like a House using a step-by-step Builder pattern, allowing different representations of the house (wooden, brick, etc.).?
+ANS:
+The Builder Design Pattern is used to construct complex objects step by step. It allows you to create different representations of the object, separating the construction process from the object itself.
+
+In this example, we will design a House class, and use a HouseBuilder to create different types of houses (e.g., wooden, brick, etc.).
+
+Components:
+House: The complex object we want to build.
+HouseBuilder: Defines all the steps to build a house (walls, roof, windows, etc.).
+Concrete Builders: Different types of builders like WoodenHouseBuilder, BrickHouseBuilder.
+Director: Orchestrates the building process using a builder.
+
+
+
+Explained Key Simplifications:
+HouseBuilder interface is reduced to a single build() method.
+Each concrete builder (WoodenHouseBuilder, BrickHouseBuilder) directly returns a House with predefined attributes.
+Director is responsible for triggering the construction.
+
+Real-world Use Case:
+The Builder pattern is ideal when you need to create complex objects step by step with different configurations. For example, constructing different types of houses (wooden, brick, or even other types) by varying their internal components while keeping the construction process uniform.

@@ -1,0 +1,15 @@
+Q. Design and Implement weather monitoring system that notifies multiple display devices whenever the weather conditions change that follows the Observer Design Pattern?
+
+In the context of a Weather Monitoring System, we can use the Observer Pattern to notify multiple display devices (observers) whenever the weather conditions (subject) change. The system consists of a weather data provider (subject) that monitors and updates weather data and notifies all registered observers (such as display devices) when the weather changes.
+
+Components:
+Subject (WeatherStation): The subject that holds the weather data and notifies observers of changes.
+Observer (DisplayDevice): The interface for display devices that will receive updates.
+Concrete Observers (e.g., PhoneDisplay, TVDisplay): Specific implementations of observers that react to weather updates.
+Client Code: Demonstrates how the system works.
+
+
+Real-world Use Case:
+The Observer Pattern is ideal for systems where one entity (subject) needs to notify multiple entities (observers) of changes. In the case of a weather monitoring system, the weather station provides new weather data, and the different display devices (such as smartphones, TVs, or even web apps) automatically receive updates. This design keeps the system flexible, as new observers can be added or removed without modifying the core logic of the weather station.
+
+In real-world applications, this could be extended to IoT devices, weather apps, or any environment where multiple systems need to receive data updates simultaneously.

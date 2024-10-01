@@ -1,0 +1,14 @@
+
+Q.Design and Implement a Template Method for Document Processing (word, pdf, excel)? 
+The Template Method Pattern defines the skeleton of an algorithm in a method, deferring some steps to subclasses. This allows subclasses to redefine certain steps of an algorithm without changing its structure. It's useful when you have a common structure for a process, but some steps differ between implementations.
+
+In the context of Document Processing, we can use the Template Method to process different document types (Word, PDF, Excel). Each document type follows a similar workflow, but has different implementations for reading and saving content.
+
+Components:
+Abstract Document Processor (Template): Contains the template method which defines the common steps of document processing.
+Concrete Document Processors: Classes that implement the specific steps for processing Word, PDF, and Excel documents.
+
+Real-world Use Case:
+The Template Method Pattern is useful when you have a general structure or algorithm that is followed by different variations of a process. In the case of document processing, the overall structure (opening, reading, processing, and saving) remains the same, but the specific details differ depending on the document type (Word, PDF, Excel). The pattern helps in maintaining this structure while allowing flexibility for customization of specific steps.
+
+This pattern is often used in frameworks where the framework defines a sequence of steps and allows clients to provide their specific implementation for certain steps.

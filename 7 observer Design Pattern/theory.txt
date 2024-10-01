@@ -1,0 +1,20 @@
+Q. Design and Implement an Observer pattern for a news agency to notify subscribers of updates?
+
+The Observer Pattern allows an object (called the subject) to notify other objects (called observers) about changes in its state. This pattern is useful when you want to keep several objects in sync with the state of another object without tightly coupling them.
+
+In this case, we will design a News Agency that acts as the subject, which notifies various Subscribers when a news update occurs.
+
+Components:
+Subject (NewsAgency): The entity that maintains the state (news) and notifies observers (subscribers) of any changes.
+Observer (Subscriber): The entities that need to be notified when the subject’s state changes.
+Concrete Observers (e.g., EmailSubscriber, SMSSubscriber): Specific implementations of subscribers.
+Client Code: To demonstrate the notification system.
+
+, all subscribers are notified.
+
+Real-world Use Case:
+The Observer pattern is widely used in event-driven systems, such as:
+
+News systems where subscribers (users) receive notifications of breaking news.
+Stock market applications where investors are notified of price changes.
+GUI frameworks where different components of the interface observe changes and update

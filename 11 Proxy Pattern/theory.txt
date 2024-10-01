@@ -1,0 +1,22 @@
+Q. Design and Implement a Proxy pattern to control access to an object (e.g., a protected resource or remote service).?
+
+The Proxy Pattern provides a surrogate or placeholder for another object to control access to it. A proxy can control access to a protected resource or remote service by acting as an intermediary. It can be used for purposes like lazy initialization, access control, logging, caching, or remote resource management.
+
+Scenario:
+Let’s consider a system where a Protected Resource (e.g., a sensitive database or service) should be accessed only by authorized users. We can use a proxy to check access rights before allowing access to the actual resource.
+
+Python Code Implementation:
+Components:
+Subject Interface: Defines the common interface that both the proxy and real object will implement.
+RealSubject: The real object which the proxy controls access to.
+Proxy: Controls access to the RealSubject.
+Client Code: Uses the Proxy to interact with the RealSubject.
+
+Use Cases for the Proxy Pattern:
+Access Control: Proxies can control access to resources, such as only allowing specific users to access certain data.
+Remote Proxy: In distributed systems, the proxy can represent an object in a different address space (e.g., accessing a remote service).
+Virtual Proxy: The proxy can delay the creation or initialization of expensive objects until they are needed (lazy initialization).
+Logging or Monitoring: A proxy can add additional functionality like logging requests, tracking usage, or monitoring performance without modifying the original object.
+Real-world Example:
+Database Access Control: A proxy can be used to prevent unauthorized users from accessing a database. The proxy verifies the user's credentials before allowing access to the database.
+Remote Services: In distributed applications, a proxy can represent a remote object. The proxy communicates with the remote object over the network and handles the complexities of network communication, allowing the client to interact with it as if it were a local object.

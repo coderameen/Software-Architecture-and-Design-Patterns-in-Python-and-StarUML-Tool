@@ -1,33 +1,29 @@
 class ChatRoom:
     def __init__(self):
         self.participants = []
-        
-    def add(self, participant):
-        self.participants.append(participant)
-        participant.room = self#create a room
-        
-    def send(self,sender,message):
+
+    def add(self, p):
+        self.participants.append(p)
+        p.room = self
+
+    def send(self, sender, msg):
         for p in self.participants:
             if p != sender:
-                p.receive(message, sender.name)
-                
+                p.receive(msg, sender.name)
+
 class Participant:
     def __init__(self, name):
         self.name = name
-    def send(self,msg):
-        # Use the room's send method to send the message
+
+    def send(self, msg):
         self.room.send(self, msg)
+
     def receive(self, msg, sender):
-         # Print the message from sender
         print(f"{sender}: {msg}")
 
-# Client Code
+# Example
 room = ChatRoom()
-alice = Participant("Alice")
-bob = Participant("Bob")
-
+alice, bob = Participant("Alice"), Participant("Bob")
 room.add(alice)
 room.add(bob)
-
 alice.send("Hi Bob!")
-bob.send("Hi Amen")
